@@ -1,3 +1,5 @@
+import dao.DaoFactory;
+import dao.SellerDao;
 import entities.Department;
 import entities.Seller;
 
@@ -11,6 +13,8 @@ public class Main {
 
         Seller seller = new Seller(21, "Bob", "bob@gmail.com", new Date(), 2000.0, obj);
         System.out.println(seller);
+
+        SellerDao sellerDao = DaoFactory.createSellerDao(); // por que?
 
     }
 }
